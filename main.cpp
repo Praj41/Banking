@@ -19,9 +19,10 @@ int main() {
             case 1: {
                 std::string nme, add;
                 std::cout << "Enter your name" << std::endl;
-                std::cin >> nme;
+                std::cin.ignore();
+                getline(std::cin, nme);
                 std::cout << "Enter your Address" << std::endl;
-                std::cin >> add;
+                getline(std::cin, add);
                 customerAtAdmin->createAcc(nme, add);
                 break;
             }

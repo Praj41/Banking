@@ -49,17 +49,17 @@ void Bank::create(const std::string& name, const std::string& address, unsigned 
     account.AccNumber = accNo;
     std::ofstream file("..\\database.txt", std::ios::binary | std::ios::app);
 
-    auto p = getPin();
-    databasePtr2[p] = accNos;
+
+    databasePtr2[getPin()] = accNos;
 
     std::cout << "Enter a new Password" << std::endl;
     databasePtr1[getPass()] = accNos++;
 
     file.write((char*)&account, sizeof(Account));
 
-    BalanceAmount[p] = 10000;
+
     std::cout << "New Account Created :" << std::endl;
-    std::cout << "Balance : 10,000" << std::endl;
+    std::cout << "Balance : 0" << std::endl;
     std::cout << "Name : " << account.Name << std::endl;
     std::cout << "Address : " << account.Address << std::endl;
     std::cout << "Interest Rate : " << account.interestRate << std::endl;

@@ -1,0 +1,4 @@
+C:\Users\ADMIN\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\202.6948.80\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - NMake Makefiles" "C:\Users\ADMIN\Desktop\WSL working dir\Clion files\ATM_Banking_System"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/ADMIN/Desktop/WSL working dir/Clion files/ATM_Banking_System/cmake-build-release

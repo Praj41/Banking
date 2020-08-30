@@ -1,0 +1,3 @@
+C:/Users/ADMIN/Desktop/WSL working dir/Clion files/ATM_Banking_System/cmake-build-release/CMakeFiles/Banking_System.dir
+C:/Users/ADMIN/Desktop/WSL working dir/Clion files/ATM_Banking_System/cmake-build-release/CMakeFiles/edit_cache.dir
+C:/Users/ADMIN/Desktop/WSL working dir/Clion files/ATM_Banking_System/cmake-build-release/CMakeFiles/rebuild_cache.dir
