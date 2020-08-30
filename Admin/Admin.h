@@ -3,12 +3,16 @@
 //
 
 #pragma once
-#include "../Bank/Bank.h"
+#include "../Customer/Customer.h"
 
-class Admin : private Bank{
+class Admin : public Customer{
 private:
 
 public:
 
-    void createAcc(const std::string &name, const std::string &address);
+    void createAcc(const std::string &name, const std::string &address) override;
+    void access() override;
+    void getBalance(){}
+    void addMoney(float){}
+    void withdrawMoney(float){}
 };

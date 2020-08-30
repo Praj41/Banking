@@ -8,7 +8,8 @@ unsigned int Bank::day = 1;
 unsigned int Bank::accounts = 43568468;
 
 void Bank::reCalc() {
-
+    for (auto& [key, bal] : BalanceAmount)
+        bal += bal * 0.0542;
 }
 
 std::string Bank::hash(std::string& hashable) {
@@ -29,22 +30,81 @@ inline void Bank::nextMonth() {
     reCalc();
 }
 
-std::string Bank::getPass() {
-    std::cout << "Enter a new Password" << std::endl;
+inline std::string Bank::getPass() {
     std::string str;
     std::cin >> str;
     return std::string(hash(str));
 }
 
-void Bank::create(const std::string& name, const std::string& address, unsigned int accNo, unsigned int pin, float interest) {
-    account = new Account(name, address, accNo, interest);
-    std::ofstream file("../database.Dat", std::ios::app | std::ios::binary);
+inline unsigned long long Bank::getPin() {
+    short int pin;
+    std::cin >> pin;
+    return std::hash<short int>{} (pin);
+}
 
-    std::string password = getPass();
+void Bank::create(const std::string& name, const std::string& address, unsigned int accNo, float interest) {
+    account.Name = name;
+    account.Address = address;
+    account.interestRate = interest;
+    account.AccNumber = accNo;
+    std::ofstream file("..\\database.txt", std::ios::binary | std::ios::app);
 
-    databasePtr1[password] = file.tellp();
-    databasePtr2[pin] = file.tellp();
+    auto p = getPin();
+    databasePtr2[p] = accNos;
 
-    file.write((char*)account, sizeof(Account));
+    std::cout << "Enter a new Password" << std::endl;
+    databasePtr1[getPass()] = accNos++;
+
+    file.write((char*)&account, sizeof(Account));
+
+    BalanceAmount[p] = 10000;
+    std::cout << "New Account Created :" << std::endl;
+    std::cout << "Balance : 10,000" << std::endl;
+    std::cout << "Name : " << account.Name << std::endl;
+    std::cout << "Address : " << account.Address << std::endl;
+    std::cout << "Interest Rate : " << account.interestRate << std::endl;
+    std::cout << "Account Number : " << account.AccNumber << std::endl;
     file.close();
+}
+
+void Bank::accessByPin() {
+    std::ifstream file("..\\database.txt", std::ios::binary | std::ios::in);
+
+    std::cout << "Enter pin" <<  std::endl;
+    auto p = getPin();
+    for (int i = 0; i <= databasePtr2[p] ; ++i)
+        file.read((char *)&account, sizeof(Account));
+
+    std::cout << "Name : " << account.Name << std::endl;
+    std::cout << "Address : " << account.Address << std::endl;
+    std::cout << "Interest Rate : " << account.interestRate << std::endl;
+    std::cout << "Account Number : " << account.AccNumber << std::endl;
+
+    file.close();
+}
+
+void Bank::accessByPass() {
+    try {
+        std::ifstream file("..\\database.txt", std::ios::binary | std::ios::in);
+
+
+        std::cout << "Enter Password" <<  std::endl;
+        auto p = getPass();
+
+        for (int i = 0; i <= databasePtr1[p] ; ++i)
+            file.read((char *)&account, sizeof(Account));
+
+        if (file.fail())
+            throw true;
+
+        file.close();
+    }
+    catch (bool fail) {
+        std::cout << "an error occurred please retry\nIf the error persists clean database.txt and restart application\n";
+        return;
+    }
+    std::cout << "Name : " << account.Name << std::endl;
+    std::cout << "Address : " << account.Address << std::endl;
+    std::cout << "Interest Rate : " << account.interestRate << std::endl;
+    std::cout << "Account Number : " << account.AccNumber << std::endl;
 }

@@ -13,22 +13,27 @@
 #include <fstream>
 
 struct Account {
-    std::string Name, Address;
+    std::string Name;
+    std::string Address;
     unsigned int AccNumber;
     float interestRate;
-    Account(std::string name, std::string address, unsigned int accNo, float interest)
-        : Name(std::move(name)), Address(std::move(address)), AccNumber(accNo), interestRate(interest){};
 };
 
 class Bank {
 private:
     void reCalc();
-    Account *account;
+    unsigned int accNos{0};
+    Account account;
+
+protected:
     static std::string getPass();
+    static unsigned long long getPin();
+
 public:
     static unsigned int day;
     std::unordered_map<std::string, fpos_t> databasePtr1;
-    std::unordered_map<unsigned int, fpos_t> databasePtr2;
+    std::unordered_map<size_t, fpos_t> databasePtr2;
+    std::unordered_map<fpos_t, double> BalanceAmount;
 
     void nextDay();
     void nextMonth();
@@ -36,5 +41,7 @@ public:
     static std::string hash(std::string &hashable);
     static unsigned int accounts;
 
-    void create(const std::string &name, const std::string &address, unsigned int accNo, unsigned int pin, float interest);
+    void create(const std::string &name, const std::string &address, unsigned int accNo, float interest);
+    void accessByPin();
+    void accessByPass();
 };
