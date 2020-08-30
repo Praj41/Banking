@@ -4,9 +4,9 @@
 
 #pragma once
 #include <iostream>
-#include "Bank.h"
+#include "../Bank/Bank.h"
 
-class ATM : public Bank{
+class ATM : private Bank{
 private:
 
 public:
