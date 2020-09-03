@@ -52,9 +52,3 @@ int main() {
         }
     }
 }
-
-/*
-    admin.createAcc("Prajyot Bhamare", "Somewhere");
-    admin.createAcc("Prajyot Bhamareyj ", "Somewhereyj f");
-    admin.access();
-     */

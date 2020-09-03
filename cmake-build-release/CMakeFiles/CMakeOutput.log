@@ -50,48 +50,48 @@ The CXX compiler identification is MSVC, found in "C:/Users/ADMIN/Desktop/WSL wo
 Determining if the C compiler works passed with the following output:
 Change Dir: C:/Users/ADMIN/Desktop/WSL working dir/Clion files/ATM_Banking_System/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_0aa5e\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_0aa5e.dir\build.make /nologo -L                  CMakeFiles\cmTC_0aa5e.dir\build
-Building C object CMakeFiles/cmTC_0aa5e.dir/testCCompiler.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @C:\Users\ADMIN\AppData\Local\Temp\nm949B.tmp
+Run Build Command(s):nmake /nologo cmTC_1621a\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_1621a.dir\build.make /nologo -L                  CMakeFiles\cmTC_1621a.dir\build
+Building C object CMakeFiles/cmTC_1621a.dir/testCCompiler.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @C:\Users\ADMIN\AppData\Local\Temp\nmB453.tmp
 testCCompiler.c
-Linking C executable cmTC_0aa5e.exe
-	C:\Users\ADMIN\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\202.6948.80\bin\cmake\win\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_0aa5e.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_0aa5e.dir\objects1.rsp @C:\Users\ADMIN\AppData\Local\Temp\nm95F4.tmp
+Linking C executable cmTC_1621a.exe
+	C:\Users\ADMIN\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\202.6948.80\bin\cmake\win\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_1621a.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_1621a.dir\objects1.rsp @C:\Users\ADMIN\AppData\Local\Temp\nmB59D.tmp
 
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/Users/ADMIN/Desktop/WSL working dir/Clion files/ATM_Banking_System/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_4d323\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_4d323.dir\build.make /nologo -L                  CMakeFiles\cmTC_4d323.dir\build
-Building C object CMakeFiles/cmTC_4d323.dir/CMakeCCompilerABI.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @C:\Users\ADMIN\AppData\Local\Temp\nm9875.tmp
+Run Build Command(s):nmake /nologo cmTC_fb920\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_fb920.dir\build.make /nologo -L                  CMakeFiles\cmTC_fb920.dir\build
+Building C object CMakeFiles/cmTC_fb920.dir/CMakeCCompilerABI.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @C:\Users\ADMIN\AppData\Local\Temp\nmB6E3.tmp
 CMakeCCompilerABI.c
-Linking C executable cmTC_4d323.exe
-	C:\Users\ADMIN\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\202.6948.80\bin\cmake\win\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_4d323.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_4d323.dir\objects1.rsp @C:\Users\ADMIN\AppData\Local\Temp\nm98C3.tmp
+Linking C executable cmTC_fb920.exe
+	C:\Users\ADMIN\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\202.6948.80\bin\cmake\win\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_fb920.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_fb920.dir\objects1.rsp @C:\Users\ADMIN\AppData\Local\Temp\nmB723.tmp
 
 
 
 Determining if the CXX compiler works passed with the following output:
 Change Dir: C:/Users/ADMIN/Desktop/WSL working dir/Clion files/ATM_Banking_System/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_550bc\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_550bc.dir\build.make /nologo -L                  CMakeFiles\cmTC_550bc.dir\build
-Building CXX object CMakeFiles/cmTC_550bc.dir/testCXXCompiler.cxx.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @C:\Users\ADMIN\AppData\Local\Temp\nm9AB7.tmp
+Run Build Command(s):nmake /nologo cmTC_4c0c6\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_4c0c6.dir\build.make /nologo -L                  CMakeFiles\cmTC_4c0c6.dir\build
+Building CXX object CMakeFiles/cmTC_4c0c6.dir/testCXXCompiler.cxx.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @C:\Users\ADMIN\AppData\Local\Temp\nmBA6D.tmp
 testCXXCompiler.cxx
-Linking CXX executable cmTC_550bc.exe
-	C:\Users\ADMIN\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\202.6948.80\bin\cmake\win\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_550bc.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_550bc.dir\objects1.rsp @C:\Users\ADMIN\AppData\Local\Temp\nm9AF6.tmp
+Linking CXX executable cmTC_4c0c6.exe
+	C:\Users\ADMIN\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\202.6948.80\bin\cmake\win\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_4c0c6.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_4c0c6.dir\objects1.rsp @C:\Users\ADMIN\AppData\Local\Temp\nmBB58.tmp
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/Users/ADMIN/Desktop/WSL working dir/Clion files/ATM_Banking_System/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_ac147\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_ac147.dir\build.make /nologo -L                  CMakeFiles\cmTC_ac147.dir\build
-Building CXX object CMakeFiles/cmTC_ac147.dir/CMakeCXXCompilerABI.cpp.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @C:\Users\ADMIN\AppData\Local\Temp\nm9D28.tmp
+Run Build Command(s):nmake /nologo cmTC_2ed2a\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_2ed2a.dir\build.make /nologo -L                  CMakeFiles\cmTC_2ed2a.dir\build
+Building CXX object CMakeFiles/cmTC_2ed2a.dir/CMakeCXXCompilerABI.cpp.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @C:\Users\ADMIN\AppData\Local\Temp\nmBCEE.tmp
 CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_ac147.exe
-	C:\Users\ADMIN\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\202.6948.80\bin\cmake\win\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_ac147.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_ac147.dir\objects1.rsp @C:\Users\ADMIN\AppData\Local\Temp\nm9D66.tmp
+Linking CXX executable cmTC_2ed2a.exe
+	C:\Users\ADMIN\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\202.6948.80\bin\cmake\win\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_2ed2a.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_2ed2a.dir\objects1.rsp @C:\Users\ADMIN\AppData\Local\Temp\nmBD3D.tmp
 
 
 

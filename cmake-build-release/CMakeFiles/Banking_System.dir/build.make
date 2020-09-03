@@ -137,32 +137,12 @@ CMakeFiles\Banking_System.dir\Admin\Admin.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Banking_System.dir\Admin\Admin.cpp.s /c "C:\Users\ADMIN\Desktop\WSL working dir\Clion files\ATM_Banking_System\Admin\Admin.cpp"
 <<
 
-CMakeFiles\Banking_System.dir\Customer\Customer.cpp.obj: CMakeFiles\Banking_System.dir\flags.make
-CMakeFiles\Banking_System.dir\Customer\Customer.cpp.obj: ..\Customer\Customer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ADMIN\Desktop\WSL working dir\Clion files\ATM_Banking_System\cmake-build-release\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Banking_System.dir/Customer/Customer.cpp.obj"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Banking_System.dir\Customer\Customer.cpp.obj /FdCMakeFiles\Banking_System.dir\ /FS -c "C:\Users\ADMIN\Desktop\WSL working dir\Clion files\ATM_Banking_System\Customer\Customer.cpp"
-<<
-
-CMakeFiles\Banking_System.dir\Customer\Customer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Banking_System.dir/Customer/Customer.cpp.i"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe > CMakeFiles\Banking_System.dir\Customer\Customer.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ADMIN\Desktop\WSL working dir\Clion files\ATM_Banking_System\Customer\Customer.cpp"
-<<
-
-CMakeFiles\Banking_System.dir\Customer\Customer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Banking_System.dir/Customer/Customer.cpp.s"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Banking_System.dir\Customer\Customer.cpp.s /c "C:\Users\ADMIN\Desktop\WSL working dir\Clion files\ATM_Banking_System\Customer\Customer.cpp"
-<<
-
 # Object files for target Banking_System
 Banking_System_OBJECTS = \
 "CMakeFiles\Banking_System.dir\main.cpp.obj" \
 "CMakeFiles\Banking_System.dir\ATM\ATM.cpp.obj" \
 "CMakeFiles\Banking_System.dir\Bank\Bank.cpp.obj" \
-"CMakeFiles\Banking_System.dir\Admin\Admin.cpp.obj" \
-"CMakeFiles\Banking_System.dir\Customer\Customer.cpp.obj"
+"CMakeFiles\Banking_System.dir\Admin\Admin.cpp.obj"
 
 # External object files for target Banking_System
 Banking_System_EXTERNAL_OBJECTS =
@@ -171,10 +151,9 @@ Banking_System.exe: CMakeFiles\Banking_System.dir\main.cpp.obj
 Banking_System.exe: CMakeFiles\Banking_System.dir\ATM\ATM.cpp.obj
 Banking_System.exe: CMakeFiles\Banking_System.dir\Bank\Bank.cpp.obj
 Banking_System.exe: CMakeFiles\Banking_System.dir\Admin\Admin.cpp.obj
-Banking_System.exe: CMakeFiles\Banking_System.dir\Customer\Customer.cpp.obj
 Banking_System.exe: CMakeFiles\Banking_System.dir\build.make
 Banking_System.exe: CMakeFiles\Banking_System.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\ADMIN\Desktop\WSL working dir\Clion files\ATM_Banking_System\cmake-build-release\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Banking_System.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\ADMIN\Desktop\WSL working dir\Clion files\ATM_Banking_System\cmake-build-release\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Banking_System.exe"
 	C:\Users\ADMIN\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\202.6948.80\bin\cmake\win\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\Banking_System.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\Banking_System.dir\objects1.rsp @<<
  /out:Banking_System.exe /implib:Banking_System.lib /pdb:"C:\Users\ADMIN\Desktop\WSL working dir\Clion files\ATM_Banking_System\cmake-build-release\Banking_System.pdb" /version:0.0  /machine:x64 /INCREMENTAL:NO /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

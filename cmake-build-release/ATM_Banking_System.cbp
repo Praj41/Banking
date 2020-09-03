@@ -100,9 +100,6 @@
 		<Unit filename="C:/Users/ADMIN/Desktop/WSL working dir/Clion files/ATM_Banking_System/Bank/Bank.h">
 			<Option target="Banking_System"/>
 		</Unit>
-		<Unit filename="C:/Users/ADMIN/Desktop/WSL working dir/Clion files/ATM_Banking_System/Customer/Customer.cpp">
-			<Option target="Banking_System"/>
-		</Unit>
 		<Unit filename="C:/Users/ADMIN/Desktop/WSL working dir/Clion files/ATM_Banking_System/Customer/Customer.h">
 			<Option target="Banking_System"/>
 		</Unit>

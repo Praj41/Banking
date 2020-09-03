@@ -208,33 +208,6 @@ Bank\Bank.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Banking_System.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Banking_System.dir\Bank\Bank.cpp.s
 .PHONY : Bank\Bank.cpp.s
 
-Customer\Customer.obj: Customer\Customer.cpp.obj
-
-.PHONY : Customer\Customer.obj
-
-# target to build an object file
-Customer\Customer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Banking_System.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Banking_System.dir\Customer\Customer.cpp.obj
-.PHONY : Customer\Customer.cpp.obj
-
-Customer\Customer.i: Customer\Customer.cpp.i
-
-.PHONY : Customer\Customer.i
-
-# target to preprocess a source file
-Customer\Customer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Banking_System.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Banking_System.dir\Customer\Customer.cpp.i
-.PHONY : Customer\Customer.cpp.i
-
-Customer\Customer.s: Customer\Customer.cpp.s
-
-.PHONY : Customer\Customer.s
-
-# target to generate assembly for a file
-Customer\Customer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Banking_System.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Banking_System.dir\Customer\Customer.cpp.s
-.PHONY : Customer\Customer.cpp.s
-
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -280,9 +253,6 @@ help:
 	@echo ... Bank/Bank.obj
 	@echo ... Bank/Bank.i
 	@echo ... Bank/Bank.s
-	@echo ... Customer/Customer.obj
-	@echo ... Customer/Customer.i
-	@echo ... Customer/Customer.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

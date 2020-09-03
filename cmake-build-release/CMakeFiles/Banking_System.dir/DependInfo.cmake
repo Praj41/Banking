@@ -7,7 +7,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/ADMIN/Desktop/WSL working dir/Clion files/ATM_Banking_System/ATM/ATM.cpp" "C:/Users/ADMIN/Desktop/WSL working dir/Clion files/ATM_Banking_System/cmake-build-release/CMakeFiles/Banking_System.dir/ATM/ATM.cpp.obj"
   "C:/Users/ADMIN/Desktop/WSL working dir/Clion files/ATM_Banking_System/Admin/Admin.cpp" "C:/Users/ADMIN/Desktop/WSL working dir/Clion files/ATM_Banking_System/cmake-build-release/CMakeFiles/Banking_System.dir/Admin/Admin.cpp.obj"
   "C:/Users/ADMIN/Desktop/WSL working dir/Clion files/ATM_Banking_System/Bank/Bank.cpp" "C:/Users/ADMIN/Desktop/WSL working dir/Clion files/ATM_Banking_System/cmake-build-release/CMakeFiles/Banking_System.dir/Bank/Bank.cpp.obj"
-  "C:/Users/ADMIN/Desktop/WSL working dir/Clion files/ATM_Banking_System/Customer/Customer.cpp" "C:/Users/ADMIN/Desktop/WSL working dir/Clion files/ATM_Banking_System/cmake-build-release/CMakeFiles/Banking_System.dir/Customer/Customer.cpp.obj"
   "C:/Users/ADMIN/Desktop/WSL working dir/Clion files/ATM_Banking_System/main.cpp" "C:/Users/ADMIN/Desktop/WSL working dir/Clion files/ATM_Banking_System/cmake-build-release/CMakeFiles/Banking_System.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")

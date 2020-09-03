@@ -6,7 +6,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Banking_System.dir/ATM/ATM.cpp.obj"
   "CMakeFiles/Banking_System.dir/Admin/Admin.cpp.obj"
   "CMakeFiles/Banking_System.dir/Bank/Bank.cpp.obj"
-  "CMakeFiles/Banking_System.dir/Customer/Customer.cpp.obj"
   "CMakeFiles/Banking_System.dir/main.cpp.obj"
 )
 
