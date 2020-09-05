@@ -12,7 +12,7 @@
 #include <utility>
 #include <fstream>
 
-struct Account {
+struct Account {                                                                    //Struct Account holds account info
     std::string Name;
     std::string Address;
     unsigned int AccNumber;
@@ -20,16 +20,16 @@ struct Account {
 };
 
 class Bank {
-private:
+private:                                                                          //Private part of class bank
     void reCalc();
     unsigned int accNos{0};
     Account account;
 
-protected:
+protected:                                                                        //Protected part of class bank
     static std::string getPass();
     static unsigned long long getPin();
 
-public:
+public:                                                                           //Public part of class bank
     static unsigned int day;
     std::unordered_map<std::string, fpos_t> databasePtr1;
     std::unordered_map<size_t, fpos_t> databasePtr2;
@@ -39,7 +39,7 @@ public:
     void nextMonth();
 
     static std::string hash(std::string &hashable);
-    static unsigned int accounts;
+    static unsigned int accounts;                                                 //static variable used to keep track of total users accounts created
 
     void create(const std::string &name, const std::string &address, unsigned int accNo, float interest);
     void accessByPin();

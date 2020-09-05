@@ -13,7 +13,7 @@ private:
 public:
     void createAcc(const std::string &name, const std::string &address) {}
     void access(){}
-    void addMoney(float) override;
-    void withdrawMoney(float) override;
-    void getBalance() override;
+    void addMoney(float) override;                                                 //Overridden functions of class Customer
+    void withdrawMoney(float) override;                                            //Overridden functions of class Customer
+    void getBalance() override;                                                    //Overridden functions of class Customer
 };

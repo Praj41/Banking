@@ -6,11 +6,11 @@
 
 #include "../Bank/Bank.h"
 
-class Customer : public Bank{
-public:
-    virtual void access() = 0;
-    virtual void createAcc(const std::string&, const std::string&) = 0;
-    virtual void getBalance() = 0;
-    virtual void withdrawMoney(float) = 0;
-    virtual void addMoney(float) = 0;
+class Customer : public Bank{                                                 //This is an interface (abstract class) with pure virtual functions
+public:                                                                       //This is an interface (abstract class) with pure virtual functions
+    virtual void access() = 0;                                                //This is an interface (abstract class) with pure virtual functions
+    virtual void createAcc(const std::string&, const std::string&) = 0;       //This is an interface (abstract class) with pure virtual functions
+    virtual void getBalance() = 0;                                            //This is an interface (abstract class) with pure virtual functions
+    virtual void withdrawMoney(float) = 0;                                    //This is an interface (abstract class) with pure virtual functions
+    virtual void addMoney(float) = 0;                                         //This is an interface (abstract class) with pure virtual functions
 };

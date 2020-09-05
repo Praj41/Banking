@@ -15,9 +15,9 @@ void Bank::reCalc() {
 std::string Bank::hash(std::string& hashable) {
     auto hash1 = std::hash<std::string_view>{}(hashable.substr(0, hashable.size() / 2));
     auto hash2 = std::hash<std::string_view>{}(hashable.substr(hashable.size() / 2));
-    std::stringstream stream;
-    stream << std::hex << hash1 << hash2 << std::dec;
-    return stream.str();
+    std::stringstream stream;                                                                               //Returns a quick hash of the entered password for security
+    stream << std::hex << hash1 << hash2 << std::dec;                                                       //Returns a quick hash of the entered password for security
+    return stream.str();                                                                                    //Returns a quick hash of the entered password for security
 }
 
 inline void Bank::nextDay() {
@@ -30,15 +30,15 @@ inline void Bank::nextMonth() {
     reCalc();
 }
 
-inline std::string Bank::getPass() {
-    std::string str;
-    std::cin >> str;
+inline std::string Bank::getPass() {                                      //Gets password from user
+    std::string str;                                                      //Gets password from user
+    std::cin >> str;                                                      //Gets password from user
     return std::string(hash(str));
 }
 
-inline unsigned long long Bank::getPin() {
-    short int pin;
-    std::cin >> pin;
+inline unsigned long long Bank::getPin() {                                 //Gets PIN from user
+    short int pin;                                                         //Gets PIN from user
+    std::cin >> pin;                                                       //Gets PIN from user
     return std::hash<short int>{} (pin);
 }
 
@@ -49,12 +49,36 @@ void Bank::create(const std::string& name, const std::string& address, unsigned 
     account.AccNumber = accNo;
     std::ofstream file("..\\database.txt", std::ios::binary | std::ios::app);
 
-
-    databasePtr2[getPin()] = accNos;
-
-    std::cout << "Enter a new Password" << std::endl;
-    databasePtr1[getPass()] = accNos++;
-
+    try {
+        int chance = 5;
+        unsigned long long int p1;
+        std::string p2;
+        while (true) {
+            p1 = getPin();
+            if (!databasePtr2.count(p1))
+                break;
+            if (!--chance)
+                throw chance;
+            std::cout << "Bad PIN please enter another PIN " << chance << " times left" << std::endl;
+        }
+        std::cout << "Enter a new Password" << std::endl;
+        chance = 5;
+        while (true) {
+            p2 = getPass();
+            if (!databasePtr1.count(p2))
+                break;
+            if (!--chance)
+                throw chance;
+            std::cout << "Bad Password please enter another password " << chance << " times left" << std::endl;
+        }
+        databasePtr2[p1] = accNos;
+        databasePtr1[p2] = accNos++;
+    }
+    catch (int chance) {
+        std::cout << "Too many bad attempts" << std::endl;
+        file.close();
+        return;
+    }
     file.write((char*)&account, sizeof(Account));
 
 
@@ -71,8 +95,8 @@ void Bank::accessByPin() {
     std::ifstream file("..\\database.txt", std::ios::binary | std::ios::in);
 
     std::cout << "Enter pin" <<  std::endl;
-    auto p = getPin();
-    for (int i = 0; i <= databasePtr2[p] ; ++i)
+    auto p = getPin();                                                                         //Displays the user info using entered PIN
+    for (int i = 0; i <= databasePtr2[p] ; ++i)                                                //Displays the user info using entered PIN
         file.read((char *)&account, sizeof(Account));
 
     std::cout << "Name : " << account.Name << std::endl;
@@ -93,9 +117,9 @@ void Bank::accessByPass() {
 
         for (int i = 0; i <= databasePtr1[p] ; ++i)
             file.read((char *)&account, sizeof(Account));
-
-        if (file.fail())
-            throw true;
+                                                                                            //Displays user info using entered password with exception handling
+        if (file.fail())                                                                    //Displays user info using entered password with exception handling
+            throw true;                                                                     //Displays user info using entered password with exception handling
 
         file.close();
     }
