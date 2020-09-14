@@ -6,11 +6,15 @@
 
 #include <string>
 #include <sstream>
-#include <string>
 #include <iostream>
 #include <unordered_map>
-#include <utility>
 #include <fstream>
+
+struct data {
+    std::string pass;
+    size_t pin;
+    fpos_t accno;
+};
 
 struct Account {                                                                    //Struct Account holds account info
     std::string Name;
@@ -31,6 +35,7 @@ protected:                                                                      
 
 public:                                                                           //Public part of class bank
     static unsigned int day;
+
     std::unordered_map<std::string, fpos_t> databasePtr1;
     std::unordered_map<size_t, fpos_t> databasePtr2;
     std::unordered_map<fpos_t, double> BalanceAmount;
@@ -41,7 +46,7 @@ public:                                                                         
     static std::string hash(std::string &hashable);
     static unsigned int accounts;                                                 //static variable used to keep track of total users accounts created
 
-    void create(const std::string &name, const std::string &address, unsigned int accNo, float interest);
+    data create(const std::string &name, const std::string &address, unsigned int accNo, float interest);
     void accessByPin();
     void accessByPass();
 };

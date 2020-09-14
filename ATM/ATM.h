@@ -11,8 +11,9 @@ class ATM : public Customer{
 private:
 
 public:
-    void createAcc(const std::string &name, const std::string &address) {}
+    data createAcc(const std::string &name, const std::string &address) {return {nullptr, 0, 0};}
     void access(){}
+    void changePassPin(int ch){}
     void addMoney(float) override;                                                 //Overridden functions of class Customer
     void withdrawMoney(float) override;                                            //Overridden functions of class Customer
     void getBalance() override;                                                    //Overridden functions of class Customer

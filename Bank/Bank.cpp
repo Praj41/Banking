@@ -42,17 +42,17 @@ inline unsigned long long Bank::getPin() {                                 //Get
     return std::hash<short int>{} (pin);
 }
 
-void Bank::create(const std::string& name, const std::string& address, unsigned int accNo, float interest) {
+data Bank::create(const std::string& name, const std::string& address, unsigned int accNo, float interest) {
     account.Name = name;
     account.Address = address;
     account.interestRate = interest;
     account.AccNumber = accNo;
     std::ofstream file("..\\database.txt", std::ios::binary | std::ios::app);
+    unsigned long long int p1;
+    std::string p2;
 
     try {
         int chance = 5;
-        unsigned long long int p1;
-        std::string p2;
         while (true) {
             p1 = getPin();
             if (!databasePtr2.count(p1))
@@ -72,12 +72,12 @@ void Bank::create(const std::string& name, const std::string& address, unsigned 
             std::cout << "Bad Password please enter another password " << chance << " times left" << std::endl;
         }
         databasePtr2[p1] = accNos;
-        databasePtr1[p2] = accNos++;
+        databasePtr1[p2] = accNos;
     }
     catch (int chance) {
         std::cout << "Too many bad attempts" << std::endl;
         file.close();
-        return;
+        return {0, 0, 0};
     }
     file.write((char*)&account, sizeof(Account));
 
@@ -89,6 +89,7 @@ void Bank::create(const std::string& name, const std::string& address, unsigned 
     std::cout << "Interest Rate : " << account.interestRate << std::endl;
     std::cout << "Account Number : " << account.AccNumber << std::endl;
     file.close();
+    return {p2, p1, accNo++};
 }
 
 void Bank::accessByPin() {

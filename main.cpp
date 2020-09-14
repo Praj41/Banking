@@ -13,7 +13,8 @@ int main() {
             << "2. Display details of account\n"
             << "3. Display account Balance\n"
             << "4. Deposit money\n"
-            << "5. Withdraw money" << std::endl;
+            << "5. Withdraw money\n"
+            << "6. Change account PIN or Password" << std::endl;
         std::cin >> Case;
         switch (Case) {
             case 1: {
@@ -23,7 +24,10 @@ int main() {
                 getline(std::cin, nme);                                            //This is a part to create a new account
                 std::cout << "Enter your Address" << std::endl;                          //This is a part to create a new account
                 getline(std::cin, add);                                            //This is a part to create a new account
-                customerAtAdmin->createAcc(nme, add);
+                auto [pass, pin, accNo] = customerAtAdmin->createAcc(nme, add);
+                customerAtATM->databasePtr1[pass] = accNo;
+                customerAtATM->databasePtr2[pin] = accNo;
+                customerAtATM->BalanceAmount[accNo] = 0;
                 break;
             }
             case 2: {
@@ -46,6 +50,13 @@ int main() {
                 float amount;                                                            //Here we add or remove money from the account
                 std::cin >> amount;                                                      //Here we add or remove money from the account
                 customerAtATM->withdrawMoney(amount);                                    //Here we add or remove money from the account
+                break;
+            }
+            case 6: {
+                int ch;
+                std::cout << "0. Forgot password\n" << "1. Forgot pin" << std::endl;
+                std::cin >> ch;
+                customerAtAdmin->changePassPin(ch);
                 break;
             }
             default : Case = 0;
