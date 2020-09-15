@@ -15,6 +15,7 @@ void Bank::reCalc() {
 std::string Bank::hash(std::string& hashable) {
     auto hash1 = std::hash<std::string_view>{}(hashable.substr(0, hashable.size() / 2));
     auto hash2 = std::hash<std::string_view>{}(hashable.substr(hashable.size() / 2));
+
     std::stringstream stream;                                                                               //Returns a quick hash of the entered password for security
     stream << std::hex << hash1 << hash2 << std::dec;                                                       //Returns a quick hash of the entered password for security
     return stream.str();                                                                                    //Returns a quick hash of the entered password for security
@@ -30,15 +31,15 @@ inline void Bank::nextMonth() {
     reCalc();
 }
 
-inline std::string Bank::getPass() {                                      //Gets password from user
-    std::string str;                                                      //Gets password from user
-    std::cin >> str;                                                      //Gets password from user
+inline std::string Bank::getPass() {                                      //Gets password from user    inline function
+    std::string str;                                                      //Gets password from user    inline function
+    std::cin >> str;                                                      //Gets password from user    inline function
     return std::string(hash(str));
 }
 
-inline unsigned long long Bank::getPin() {                                 //Gets PIN from user
-    short int pin;                                                         //Gets PIN from user
-    std::cin >> pin;                                                       //Gets PIN from user
+inline unsigned long long Bank::getPin() {                                 //Gets PIN from user   inline function
+    short int pin;                                                         //Gets PIN from user   inline function
+    std::cin >> pin;                                                       //Gets PIN from user   inline function
     return std::hash<short int>{} (pin);
 }
 
@@ -47,39 +48,45 @@ data Bank::create(const std::string& name, const std::string& address, unsigned 
     account.Address = address;
     account.interestRate = interest;
     account.AccNumber = accNo;
-    std::ofstream file("..\\database.txt", std::ios::binary | std::ios::app);
+
+    std::ofstream file("..\\database.txt", std::ios::binary | std::ios::app);          //File handling
     unsigned long long int p1;
     std::string p2;
 
     try {
         int chance = 5;
+
         while (true) {
-            p1 = getPin();
-            if (!databasePtr2.count(p1))
+            //p1 = getPin();                                                                                         //Exception handling for a new pin and password
+            if (p1 = getPin(); !databasePtr2.count(p1))                                                              //Exception handling for a new pin and password
                 break;
             if (!--chance)
                 throw chance;
             std::cout << "Bad PIN please enter another PIN " << chance << " times left" << std::endl;
         }
+
         std::cout << "Enter a new Password" << std::endl;
         chance = 5;
+
         while (true) {
-            p2 = getPass();
-            if (!databasePtr1.count(p2))
+            //p2 = getPass();
+            if (p2 = getPass(); !databasePtr1.count(p2))
                 break;
             if (!--chance)
                 throw chance;
             std::cout << "Bad Password please enter another password " << chance << " times left" << std::endl;
         }
+
         databasePtr2[p1] = accNos;
         databasePtr1[p2] = accNos;
     }
     catch (int chance) {
         std::cout << "Too many bad attempts" << std::endl;
         file.close();
+
         return {0, 0, 0};
     }
-    file.write((char*)&account, sizeof(Account));
+    file.write((char*)&account, sizeof(Account));                                                      //writing info to file
 
 
     std::cout << "New Account Created :" << std::endl;
@@ -89,6 +96,7 @@ data Bank::create(const std::string& name, const std::string& address, unsigned 
     std::cout << "Interest Rate : " << account.interestRate << std::endl;
     std::cout << "Account Number : " << account.AccNumber << std::endl;
     file.close();
+
     return {p2, p1, accNo++};
 }
 
@@ -96,8 +104,9 @@ void Bank::accessByPin() {
     std::ifstream file("..\\database.txt", std::ios::binary | std::ios::in);
 
     std::cout << "Enter pin" <<  std::endl;
-    auto p = getPin();                                                                         //Displays the user info using entered PIN
-    for (int i = 0; i <= databasePtr2[p] ; ++i)                                                //Displays the user info using entered PIN
+    auto p = getPin();                                                                         //Displays the user info using entered PIN using file handling
+
+    for (int i = 0; i <= databasePtr2[p] ; ++i)                                                //Displays the user info using entered PIN using file handling
         file.read((char *)&account, sizeof(Account));
 
     std::cout << "Name : " << account.Name << std::endl;
@@ -118,9 +127,9 @@ void Bank::accessByPass() {
 
         for (int i = 0; i <= databasePtr1[p] ; ++i)
             file.read((char *)&account, sizeof(Account));
-                                                                                            //Displays user info using entered password with exception handling
-        if (file.fail())                                                                    //Displays user info using entered password with exception handling
-            throw true;                                                                     //Displays user info using entered password with exception handling
+                                                                                            //Displays user info using entered password with exception handling and file handling
+        if (file.fail())                                                                    //Displays user info using entered password with exception handling and file handling
+            throw true;                                                                     //Displays user info using entered password with exception handling and file handling
 
         file.close();
     }
@@ -128,6 +137,7 @@ void Bank::accessByPass() {
         std::cout << "an error occurred please retry\nIf the error persists clean database.txt and restart application\n";
         return;
     }
+
     std::cout << "Name : " << account.Name << std::endl;
     std::cout << "Address : " << account.Address << std::endl;
     std::cout << "Interest Rate : " << account.interestRate << std::endl;

@@ -9,47 +9,56 @@ data Admin::createAcc(const std::string& name, const std::string& address) {
     unsigned int accNo = accounts++;
     float interest = 5.42f;
     std::cout << "Set new ATM pin:" << std::endl;
-    return create(name, address, accNo, interest);
+
+    return create(name, address, accNo, interest);                       //Calls create from Bank and forwards the basic info
     //nextDay();
 }
 
 void Admin::access() {
     int acc;
     std::cout << "0. to access by password\n" << "1. to access by pin" << std::endl;
+
     std::cin >> acc;
     if (acc)
-        accessByPin();
+        accessByPin();                                                        //calls functions from the bank class as per the choice
     else
         accessByPass();
 }
 
-void Admin::changePassPin(int ch) {
+void Admin::changePassPin(int ch) {                                                 //Allows for changing pin and password using either other
     try {
         int chance = 3;
+
         if (ch) {
             std::cout << "Enter current Password" << std::endl;
             auto p = getPass();
+
             while (true) {
-                if (databasePtr1.count(p))
+                if (databasePtr1.count(p))                                                         //checks is the password is present in the database
                     break;
                 if (!--chance)
                     throw chance;
+
                 std::cout << "Bad Password, please enter another password " << chance << " times left" << std::endl;
                 p = getPass();
             }
+
             std::cout << "Enter new PIN" << std::endl;
             databasePtr2[getPin()] = databasePtr1[p];
         } else {
+
             std::cout << "Enter current PIN" << std::endl;
             auto p = getPin();
+
             while (true) {
-                if (databasePtr2.count(p))
+                if (databasePtr2.count(p))                                                            //checks is the PIN is present in the database
                     break;
                 if (!--chance)
                     throw chance;
                 std::cout << "Bad PIN, please enter another PIN " << chance << " times left" << std::endl;
                 p = getPin();
             }
+
             std::cout << "Enter new Password" << std::endl;
             databasePtr1[getPass()] = databasePtr2[p];
 

@@ -9,7 +9,6 @@ class Admin : public Customer{
 private:
 
 public:
-
     data createAcc(const std::string &name, const std::string &address) override;
     void access() override;
     void getBalance(){}

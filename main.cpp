@@ -15,16 +15,21 @@ int main() {
             << "4. Deposit money\n"
             << "5. Withdraw money\n"
             << "6. Change account PIN or Password" << std::endl;
+
         std::cin >> Case;
         switch (Case) {
             case 1: {
                 std::string nme, add;                                                    //This is a part to create a new account
                 std::cout << "Enter your name" << std::endl;                             //This is a part to create a new account
-                std::cin.ignore();                                                       //This is a part to create a new account
-                getline(std::cin, nme);                                            //This is a part to create a new account
-                std::cout << "Enter your Address" << std::endl;                          //This is a part to create a new account
-                getline(std::cin, add);                                            //This is a part to create a new account
+
+                std::cin.ignore();
+                getline(std::cin, nme);
+
+                std::cout << "Enter your Address" << std::endl;
+                getline(std::cin, add);
+
                 auto [pass, pin, accNo] = customerAtAdmin->createAcc(nme, add);
+
                 customerAtATM->databasePtr1[pass] = accNo;
                 customerAtATM->databasePtr2[pin] = accNo;
                 customerAtATM->BalanceAmount[accNo] = 0;
@@ -42,20 +47,23 @@ int main() {
                 std::cout << "Enter the Amount to Deposit" << std::endl;
                 float amount;
                 std::cin >> amount;
-                customerAtATM->addMoney(amount);                                         //Here we add or remove money from the account
-                break;                                                                   //Here we add or remove money from the account
-            }                                                                            //Here we add or remove money from the account
+
+                customerAtATM->addMoney(amount);
+                break;
+            }
             case 5: {                                                                    //Here we add or remove money from the account
-                std::cout << "Enter the Amount to Withdraw" << std::endl;                //Here we add or remove money from the account
-                float amount;                                                            //Here we add or remove money from the account
-                std::cin >> amount;                                                      //Here we add or remove money from the account
-                customerAtATM->withdrawMoney(amount);                                    //Here we add or remove money from the account
+                std::cout << "Enter the Amount to Withdraw" << std::endl;
+                float amount;
+                std::cin >> amount;
+
+                customerAtATM->withdrawMoney(amount);
                 break;
             }
             case 6: {
                 int ch;
                 std::cout << "0. Forgot password\n" << "1. Forgot pin" << std::endl;
                 std::cin >> ch;
+
                 customerAtAdmin->changePassPin(ch);
                 break;
             }
